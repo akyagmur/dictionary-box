@@ -4,23 +4,23 @@
     <meta charset="UTF-8">
     <title>Dictionary Box</title>
     <!--Import materialize.css-->
-    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection" />
-    <style>
+    <link type="text/css" rel="stylesheet" href="materialize/css/materialize.min.css" media="screen,projection"/>
+    <style type="text/css">
         body {
             margin: 0px;
         }
-        
+
         #top {
             position: fixed;
             width: 100%;
             overflow: hidden;
         }
-        
+
         .row .col {
             padding: 0px;
             margin: 0px;
         }
-        
+
         .btn-large {
             height: 100%;
             line-height: 54px;
@@ -28,12 +28,12 @@
             padding: 0px;
             border-radius: 0px;
         }
-        
+
         .row::after {
             clear: none;
         }
-        
-        #webContent {
+
+        webview {
             display: inline-flex;
             padding: 0px;
             margin: 0px;
@@ -41,25 +41,49 @@
             min-height: 560px;
             margin-top: 54px;
         }
+
+        .google {
+            background: #4285F4;
+        }
+
+        .google:hover {
+            background: #6BA3FF;
+        }
+
+        .tureng {
+            background: #333333;
+        }
+
+        .tureng:hover {
+            background: #4F4E4E;
+        }
     </style>
 </head>
 <body>
-    <div class="row" id="top">
-        <div class="col s6">
-            <a class="btn-large google" onclick="openURL('https://translate.google.com.tr/m/translate#en/tr')" onmouseover="this.style.background='#6ba3ff'" onmouseout="this.style.background='#4285F4'" style="background: #4285F4;">Google</a>
-        </div>
-        <div class="col s6">
-            <a class="btn-large tureng" onclick="openURL('http://tureng.com/tr/turkce-ingilizce')" onmouseover="this.style.background='#4f4e4e'" onmouseout="this.style.background='#333333'" style="background: #333333">Tureng</a>
-        </div>
+<div class="row" id="top">
+    <div class="col s6">
+        <a class="btn-large google" onclick="openURL('google')">Google</a>
     </div>
-    <webview id="webContent" src="https://translate.google.com.tr/m/translate#en/tr"></webview>
+    <div class="col s6">
+        <a class="btn-large tureng" onclick="openURL('tureng')">Tureng</a>
+    </div>
+</div>
+<webview id="google" src="https://translate.google.com.tr/m/translate#en/tr" plugins></webview>
+<webview id="tureng" src="" style="display:none"></webview>
 </body>
 <script>
-const webView = document.getElementById("webContent")
-
-function openURL(param) {
-    webView.src != param ? webView.src = param : false;
-}
+    function openURL(param) {
+        const webView = document.getElementById(param)
+        if (param == "google") {
+            document.getElementById("tureng").style.display = "none"
+        } else {
+            document.getElementById("google").style.display = "none"
+            if (webView.src == "") {
+                webView.src = "http://tureng.com/tr/turkce-ingilizce";
+            }
+        }
+        webView.style.display = "inline-flex"
+    }
 </script>
 
 </html>
