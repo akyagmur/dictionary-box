@@ -3,7 +3,7 @@
   <br>
 </h1>
 
-<h4 align="center">"Easy access to Google Translate and Tureng for Mac OS.</h4>
+<h4 align="center">Easy access to Google Translate and Tureng for Mac OS.</h4>
 
 ## Why?
 
