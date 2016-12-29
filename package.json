@@ -1,0 +1,16 @@
+{
+  "name"    : "dictionary-box",
+  "description": "Easy access to Google Translate and Tureng for Mac OS.",
+  "version" : "1.0.0",
+  "author": {
+    "name": "Ali Kenan Yağmur",
+    "email": "akyagmur@gmail.com",
+    "url": "https://webtorrent.io"
+  },
+  "license": "MIT",
+  "main"    : "main.js",
+  "productName" : "Dictionary Box",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
