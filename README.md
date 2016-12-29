@@ -9,6 +9,11 @@
 
 Because, I really needed this. I'm tired of opening a browser for to use dictionary.
 
+## About
+
+Dictionary Box keeps your history until you delete them,search cookies, Google Translate histories, starred words etc.
+For clear your history, from "Dictionary Box" menu, select "Clear Cookies".
+
 ## Screenshot
 
 <p align="center">
