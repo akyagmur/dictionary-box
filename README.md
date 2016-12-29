@@ -11,7 +11,9 @@ Because, I really needed this. I'm tired of opening a browser for to use diction
 
 ## Screenshot
 
-![screenshot](screenshot.png)
+<p align="center">
+  <img src="https://github.com/akyagmur/dictionary-box/raw/master/screenshot.png" alt="screenshot" width="530">
+</p>
 
 ## How to run?
 
